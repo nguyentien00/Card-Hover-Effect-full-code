@@ -1,0 +1,9 @@
+ <img src="https://flagsapi.com/GB/shiny/32.png">
+<img src="https://openweathermap.org/img/wn/10d@4x.png">
+'https://api.openweathermap.org/data/2.5/weather?units=metric&appid=' 
+
+ '9505fd1df737e20152fbd78cdb289b6a';
+
+ `https://flagsapi.com/${data.sys.country}/shiny/32.png`;
+
+`https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;

@@ -1,0 +1,142 @@
+@import url('https://use.fontawesome.com/releases/v6.5.1/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.card-inner {
+  width: inherit;
+  height: 18.75rem;
+  position: relative;
+  background: #fff;
+  border-radius: 1.25rem;
+  border-bottom-right-radius: 0;
+  overflow: hidden;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.imgBox {
+  position: absolute;
+  inset: 0;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.icon {
+  width: 6rem;
+  height: 6rem;
+  position: absolute;
+  bottom: -0.375rem;
+  right: -0.375rem;
+  background: #fff;
+  border-top-left-radius: 50%;
+}
+
+.icon::before {
+  width: 1.25rem;
+  height: 1.25rem;
+  position: absolute;
+  content: "";
+  bottom: 0.375rem;
+  left: -1.25rem;
+  background: transparent;
+  border-bottom-right-radius: 1.25rem;
+  box-shadow: 0.313rem 0.313rem 0 0.313rem #fff;
+}
+
+.icon::after {
+  width: 1.25rem;
+  height: 1.25rem;
+  position: absolute;
+  content: "";
+  top: -1.25rem;
+  right: 0.375rem;
+  background: transparent;
+  border-bottom-right-radius: 1.25rem;
+  box-shadow: 0.313rem 0.313rem 0 0.313rem #fff;
+}
+
+.iconBox {
+  position: absolute;
+  inset: 0.625rem;
+  background: #d3b19a;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.iconBox i {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.content {
+  padding: 0.938rem 0.625rem;
+}
+
+h3 {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+}
+
+p {
+  margin: 0.625rem 0 1.25rem;
+  color: #565656;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+}
+
+ul .branding {
+  color: #704a31;
+}
+
+ul .packaging {
+  color: #1e3938;
+}
+
+li {
+  text-transform: uppercase;
+  background: var(--clr-tag);
+  color: #282828;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 0.375rem 0.625rem;
+  border-radius: 0.188rem;
+}

@@ -1,0 +1,115 @@
+@import url('https://use.fontawesome.com/releases/v6.5.1/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800;900&display=swap');
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background-color: #000000;
+  color: white;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 150px;
+  flex-wrap: wrap;
+  font-family: "Noto Sans";
+}
+
+.box {
+  position: relative;
+  width: 240px;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--clr);
+  box-shadow:
+    0 0 0 15px #0009,
+    0 25px 55px var(--clr);
+}
+
+h2 {
+  position: relative;
+  color: white;
+  font-size: 4em;
+  text-align: center;
+  gap: 10px;
+  line-height: 2.5em;
+  transform: scale(0);
+  transition: 0.5s;
+  transition-delay: 0s;
+  filter: blur(10px);
+}
+
+small {
+  font-size: 0.35em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.box:hover h2 {
+  transform: scale(1);
+  transition-delay: 0.5s;
+  filter: blur(0px);
+}
+
+.fa-solid {
+  position: absolute;
+  font-size: 4em;
+  transition: 0.5s;
+  transition-delay: 0s;
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+.clip {
+  position: absolute;
+  inset: 20px;
+  box-shadow: 0 0 0 18px #020d1e;
+}
+
+.clip span {
+  position: absolute;
+  inset: 0;
+  background: #020d1e;
+  transition: 0.25s;
+}
+
+.clip span:nth-child(1) {
+  clip-path: polygon(0 0, 50% 50%, 100% 0);
+  transition-delay: 0s;
+}
+
+.clip span:nth-child(2) {
+  clip-path: polygon(0 0, 40% 50%, 50% 100%, 0% 100%);
+  transition-delay: 0.25s;
+}
+
+.clip span:nth-child(3) {
+  clip-path: polygon(60% 50%, 100% 0, 100% 100%, 50% 100%);
+  transition-delay: 0.5s;
+}
+
+.box:hover .fa-solid {
+  transform: translateY(0px);
+  opacity: 1;
+  transition-delay: 1s;
+}
+
+.box:hover .clip span:nth-child(1) {
+  clip-path: polygon(0 0, 50% 0, 100% 0);
+}
+
+.box:hover .clip span:nth-child(2) {
+  clip-path: polygon(0 0, 0 100%, 50% 100%, 0% 100%);
+}
+
+.box:hover .clip span:nth-child(3) {
+  clip-path: polygon(100% 100%, 100% 0, 100% 100%, 50% 100%);
+}
